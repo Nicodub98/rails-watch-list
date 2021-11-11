@@ -1,2 +1,10 @@
 <h1><%= @list.name %></h1>
+
+<div class="container">
+<%@bookmarks.each do |bookmark|%>
+<div class="card"><%= bookmark.movie_id%></div>
+<% end %>
+</div>
+
 <%= link_to 'My lists', lists_path %>
+<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
